@@ -1,0 +1,24 @@
+h1= user.name
+
+h2 Bio
+p= user.bio
+
+h2 Email
+p= user.email
+
+h2 Gender
+p= user.gender
+
+h2 Birthday
+p= user.birthday
+
+- if (user.twitter) {
+  h2 Twitter
+  p
+    a(href= user.twitter_url)="@" + user.twitter
+- }
+
+
+form(action="/users/" + encodeURIComponent(user.username), method="POST")
+  input(name="_method", type="hidden", value="DELETE")
+  input(type="submit", value="Delete")

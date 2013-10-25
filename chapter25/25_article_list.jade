@@ -1,0 +1,19 @@
+h1 Articles
+
+p
+  a(href="/articles/new") Create new article
+
+ul
+  - articles.forEach(function(article) {
+    li
+      a(href="/articles/" + encodeURIComponent(article.title))= article.title
+  - });
+
+- if (page > 0) {
+  a(href="?page=" + (page - 1)) Previous
+  &nbsp;
+- }
+
+- if (! lastPage) {
+  a(href="?page=" + (page + 1)) Next
+- }

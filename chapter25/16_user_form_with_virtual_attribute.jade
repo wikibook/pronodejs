@@ -1,0 +1,29 @@
+h1 New User
+
+form(method="POST", action="/users")
+  p
+    label(for="username") Username<br />
+    input#username(name="username")
+  p
+    label(for="full_name") Full name (first and last)<br />
+    input#full_name(name="full_name")
+  p
+    label(for="email") Email<br />
+    input#email(name="email")
+  p
+    label(for="password") Password<br />
+    input#password(type="password", name="password")
+  p
+    label(for="gender") Gender<br />
+    input#gender(name="gender")
+  p
+    label(for="birthday") Birthday<br />
+    input#birthday(name="birthday")
+  p
+    label(for="twitter") Twitter Handle<br />
+    input#twitter(name="twitter")
+  p
+    label(for="bio") Bio<br />
+    textarea#bio(name="bio")
+  p
+    input(type="submit", value="Create")

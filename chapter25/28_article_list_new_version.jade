@@ -1,0 +1,15 @@
+h1 Articles
+
+p
+  a(href="/articles/new") Create new article
+
+p!= partial('articles/list', {articles: articles})
+
+- if (page > 0) {
+  a(href="?page=" + (page - 1)) Previous
+  &nbsp;
+- }
+
+- if (! lastPage) {
+  a(href="?page=" + (page + 1)) Next
+- }
